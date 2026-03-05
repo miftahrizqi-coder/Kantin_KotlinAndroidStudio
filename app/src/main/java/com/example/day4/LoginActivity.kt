@@ -29,21 +29,18 @@ class LoginActivity : ComponentActivity() {
             val nim = etNim.text.toString()
             val rbId = rbKelas.checkedRadioButtonId
 
-            // Validasi NIM
             if (nim.isEmpty()){
                 etNim.error = "NIM tidak boleh kosong"
                 etNim.requestFocus()
                 return@setOnClickListener
             }
 
-            // Validasi Nama
             if (nama.isEmpty()){
                 etNama.error = "Nama tidak boleh kosong"
                 etNama.requestFocus()
                 return@setOnClickListener
             }
 
-            // Validasi Kelas
             if (rbId == -1){
                 Toast.makeText(this, "Pilih kelas terlebih dahulu", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
